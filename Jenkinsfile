@@ -5,7 +5,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'node --version'
+
+                sh 'echo node --version'
                 sh 'npm run ng build --prod --aot --sm --progress=false'
             }
         }
