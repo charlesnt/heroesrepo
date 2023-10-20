@@ -6,8 +6,8 @@ pipeline {
         stage('build') {
             steps {
 
-                sh 'echo node --version'
-                sh 'npm run ng build --prod --aot --sm --progress=false'
+                sh 'node --version'
+                sh 'npm instaLL'
             }
         }
        stage('Test') {
