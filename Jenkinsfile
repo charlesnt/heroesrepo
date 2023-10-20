@@ -6,8 +6,14 @@ pipeline {
         stage('build') {
             steps {
                 sh 'node --version'
-              sh 'npm install'
+                sh 'ng build --prod --aot --sm --progress=false'
             }
         }
+       stage('Test') {
+      
+          sh 'ng test --progress=false --watch false'
+        }
+      
     }
-}
+    }
+
