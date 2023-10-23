@@ -7,14 +7,14 @@ pipeline {
             steps {
                nodejs('node@8.12.0'){
                 sh 'node --version'
-                sh 'npm install'
+                sh 'npm run-script build'
                }
             }
         }
        stage('Test') {
        steps {
           nodejs('node@8.12.0'){
-          sh 'npm run ng test --progress=false --watch false'
+          sh 'npm  test'
         }}}
       
     }
